@@ -18,10 +18,11 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
-		<kotlin.version>1.4.0</kotlin.version>
+        <kotlin.version>1.4.0</kotlin.version>
         <arrow.version>0.10.5</arrow.version>
         <spring-cloud.version>Hoxton.SR7</spring-cloud.version>
-	</properties>
+        <spring-fu-kofu.version>0.3.2</spring-fu-kofu.version>
+    </properties>
 
     <repositories>
         <repository>
@@ -102,7 +103,7 @@
         <dependency>
             <groupId>org.springframework.fu</groupId>
             <artifactId>spring-fu-kofu</artifactId>
-            <version>0.3.2</version>
+            <version>${spring-fu-kofu.version}</version>
         </dependency>
 
 		<dependency>

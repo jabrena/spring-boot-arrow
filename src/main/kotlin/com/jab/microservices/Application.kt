@@ -2,6 +2,7 @@ package com.jab.microservices
 
 import org.springframework.fu.kofu.webApplication
 import org.springframework.fu.kofu.webmvc.webMvc
+import org.springframework.http.MediaType
 import org.springframework.web.servlet.function.ServerRequest
 import org.springframework.web.servlet.function.ServerResponse.ok
 
@@ -26,6 +27,10 @@ fun main() {
     app.run()
 }
 
+data class Sample(val message: String)
+
 class SampleHandler() {
-    fun api(request: ServerRequest) = ok().body("Hello World")
+    fun api(request: ServerRequest) = ok()
+        .contentType(MediaType.APPLICATION_JSON)
+        .body(Sample("Hello World"))
 }
